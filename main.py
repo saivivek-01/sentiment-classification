@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-model = joblib.load("model/sentiment_model.pkl")
+model = joblib.load("sentiment_model.pkl")
 print("✅ Model loaded successfully.")
 
 @app.route("/", methods=["GET", "POST"])
