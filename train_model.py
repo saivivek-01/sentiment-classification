@@ -28,7 +28,7 @@ pipeline = Pipeline([
 ])
 
 pipeline.fit(X_train, y_train)
-joblib.dump(pipeline, "model/sentiment_model.pkl")
+joblib.dump(pipeline, "sentiment_model.pkl")
 
 os.makedirs("static", exist_ok=True)
 sentiment_counts = df['sentiment'].value_counts()
@@ -36,7 +36,7 @@ sentiment_counts.plot(kind='bar', color=['tomato', 'seagreen'])
 plt.title("Sentiment Distribution")
 plt.xlabel("Sentiment (0 = Negative, 1 = Positive)")
 plt.ylabel("Number of Reviews")
-plt.savefig("static/chart.png")
+plt.savefig("chart.png")
 plt.close()
 
 print("✅ Model trained and chart saved.")
